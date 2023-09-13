@@ -1,5 +1,8 @@
-(function () {
-  var whiteboard = window.whiteboard;
+import whiteboard from "./whiteboard";
+
+
+
+  
   var socket = window.io(window.location.origin);
 
   socket.on("connect", function () {
@@ -22,4 +25,4 @@
   whiteboard.on("draw", function (start, end, color) {
     socket.emit("draw", start, end, color);
   });
-})();
+
