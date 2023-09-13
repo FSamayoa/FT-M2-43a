@@ -29,20 +29,11 @@ function ToDo(description) {
 // Debe setear el atributo 'complete' del ToDo en true
 
 // Tu código acá:
-//?/******************************************************* */
-ToDo.prototype.incompleteToDo = function () {
-  
-  this.complete = false
-     
- }
-
-
-//?/******************************************************* */
 
 ToDo.prototype.completeToDo = function () {
   
   
- this.complete = true
+ this.complete = !this.complete
  
 }
 
@@ -80,16 +71,10 @@ function buildToDo(todo, index) {
   checkbox.id = index
   checkbox.className = "completeCheckbox"
   // checkbox.addEventListener("click",completeToDo)
-  checkbox.addEventListener("click",()=>{
-    if (todo.complete === true){
-      toDoText.className = "completeText"
-      checkbox.checked = true
-       completeToDo()
-  }  
-  incompleteToDo()
-    
-  })
-
+  checkbox.addEventListener("click",completeToDo)
+   
+       
+ 
 
   // toDoText.addEventListener("click",completeToDo)
 
