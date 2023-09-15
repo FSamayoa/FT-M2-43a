@@ -1,12 +1,28 @@
 import React from "react";
+import Botones from "./Botones";
 
-const studentName = "";
+const studentName = "Fernando S";
 const techSkills = ["Html", "Css", "JavaScript", "React", "Redux"];
 const alerts = { m1: "Aprobado", m2: "En curso" };
 
 export default function Bienvenido() {
   // el código de tu componente acá
-  return;
+  return (
+    <div>
+      <h1>Hola Mundo</h1>
+      <h3>{studentName}</h3>
+      <ul>
+        {techSkills.map((elemento) => {
+          return (
+            <li>{elemento}</li>
+          )
+        })}
+      </ul>
+        <div>
+        <Botones {...alerts}/> 
+        </div>
+    </div>
+  )
 }
 
 // Esto lo exportamos para los tests
