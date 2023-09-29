@@ -1,0 +1,5 @@
+export const GET_USERS = 'GET_USERS'
+export const COUNTER = 'COUNTER'
+export const DECREMENT = 'DECREMENT'
+export const USER_DETAIL = 'USER_DETAIL'
+export const CLEAN_DETAIL = 'CLEAN_DETAIL'
